@@ -10,10 +10,12 @@ A simple and interactive calculator built using HTML, CSS, and JavaScript. This 
 - **Backspace**: Correct any mistakes by removing the last character entered.
 - **Mobile Responsiveness**: Fully responsive for mobile devices.
 
-## Getting Started
-
-To use this project locally:
+## web live link : https://mahalakshmi-00.github.io/Calculator/
 
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/mahalakshmi-00/Calculator.git
+
+
+
+   
