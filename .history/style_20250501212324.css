@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'SF Pro Display', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 10px;
+}
+
+.calculator {
+  position: relative;
+  width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 32px;
+  padding: 10px;
+  text-align: right;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #2c2c2e;
+  color: white;
+  transition: background 0.3s;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for buttons */
+  gap: 12px;
+}
+
+button {
+  padding: 20px;
+  font-size: 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s, color 0.2s;
+  height: 60px;
+  width: 60px;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Dark mode toggle position */
+.toggle-mode {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Light Mode */
+body.light-mode {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+body.light-mode .calculator {
+  background-color: #ffffff;
+}
+
+body.light-mode #display {
+  background-color: #eeeeee;
+  color: #000;
+}
+
+body.light-mode button {
+  background-color: #dcdcdc;
+  color: #000;
+}
+
+body.light-mode .operator {
+  background-color: #ff9f0a;
+  color: #000;
+}
+
+body.light-mode .equals {
+  background-color: #34c759;
+  color: #000;
+}
+
+body.light-mode .clear {
+  background-color: #ff3b30;
+  color: #fff;
+}
+
+body.light-mode .backspace {
+  background-color: #5e5ce6;
+  color: #fff;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+body.dark-mode .calculator {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode #display {
+  background-color: #2c2c2e;
+  color: white;
+}
+
+body.dark-mode button {
+  background-color: #3a3a3c;
+  color: white;
+}
+
+body.dark-mode .operator {
+  background-color: #ff9f0a;
+  color: #000;
+}
+
+body.dark-mode .equals {
+  background-color: #34c759;
+  color: #000;
+}
+
+body.dark-mode .clear {
+  background-color: #ff3b30;
+}
+
+body.dark-mode .backspace {
+  background-color: #5e5ce6;
+}
+
+/* Custom Grid Layout for Buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px; /* Space between buttons */
+}
+
+/* Ensure buttons with text get equal space */
+button {
+  font-size: 26px;
+  padding: 20px;
+  min-width: 60px;
+  height: 60px;
+}
+
+/* Styling for operator buttons */
+button.operator {
+  background-color: #ff9f0a;
+}
+
+button.equals {
+  background-color: #34c759;
+  color: white;
+}
+
+button.clear {
+  background-color: #ff3b30;
+  color: white;
+}
+
+button.backspace {
+  background-color: #5e5ce6;
+  color: white;
+}
+
+/* Custom Styling for Parentheses Buttons */
+button.parenthesis {
+  font-size: 26px;
+  padding: 18px;
+  background-color: #5e5ce6;
+  color: white;
+  border-radius: 12px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 400px) {
+  .calculator {
+    width: 90%;
+    padding: 15px;
+  }
+
+  button {
+    padding: 18px;
+    font-size: 22px;
+  }
+
+  #display {
+    font-size: 30px;
+  }
+}
